@@ -4,7 +4,7 @@ applications:
     path: build/libs/pal-tracker.jar
     buildpack: https://github.com/cloudfoundry/java-buildpack.git
     routes:
-      - route: pal-tracker-pietro-sampsonite.apps.chicken.pal.pivotal.io
+      - route: pal-tracker-smart-bushbuck.apps.evans.pal.pivotal.io
     env:
       WELCOME_MESSAGE: Hello from the review environment
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
