@@ -27,7 +27,7 @@ public class TimeEntryController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<TimeEntry> read(@PathVariable(name="id") long timeEntryId) {
+    public ResponseEntity<TimeEntry> read(@PathVariable(name="id") Long timeEntryId) {
         TimeEntry timeEntry = timeEntryRepository.find(timeEntryId);
         System.out.println("Timeentry ========"+timeEntry);
         if (timeEntry != null) {
@@ -38,7 +38,7 @@ public class TimeEntryController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<TimeEntry> update(@PathVariable(name="id") long timeEntryId, @RequestBody TimeEntry expected) {
+    public ResponseEntity<TimeEntry> update(@PathVariable(name="id") Long timeEntryId, @RequestBody TimeEntry expected) {
         TimeEntry updatedTimeEntry = timeEntryRepository.update(timeEntryId,expected);
 
         if (updatedTimeEntry != null) {
